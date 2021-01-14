@@ -4,13 +4,8 @@
 // <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 // <script src="Assets/script.js"></script>
 
-
-
-
-
-
-
 let drinkName;
+let liquorName;
 
 
 $("#name-search").on("click", function (event) {
@@ -18,6 +13,23 @@ $("#name-search").on("click", function (event) {
     event.preventDefault();
 
     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
+
+    // Perfoming an AJAX GET request to our queryURL
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+        .then(function (response) {
+            console.log(response);
+        });
+
+});
+
+$("#liquor-search").on("click", function (event) {
+    liquorName = $("#liquor-name").val().trim();
+    event.preventDefault();
+
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquorName;
 
     // Perfoming an AJAX GET request to our queryURL
     $.ajax({
