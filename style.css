@@ -1,0 +1,56 @@
+
+.mobile-app-message-bar {
+    height: 5rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fefefe;
+  }
+  
+  .mobile-app-message-bar .camera-button {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    padding: 1rem;
+  }
+  
+  .mobile-app-message-bar .camera-button i,
+  .mobile-app-message-bar .camera-button img,
+  .mobile-app-message-bar .camera-button svg {
+    font-size: 1.5rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+  }
+  
+  .mobile-app-message-bar .message-input {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  
+  .mobile-app-message-bar .message-input input[type='text'] {
+    border-radius: 0.625rem;
+    margin: 0;
+  }
+  
+  .mobile-app-message-bar .send-button {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    padding: 1rem;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  h1{
+      text-align: center;
+      font-weight: 100px; 
+      
+    }
+  
