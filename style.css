@@ -10,7 +10,8 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: #fefefe;
+    background: aqua;
+    padding: 2rem;
   }
   
   .mobile-app-message-bar .camera-button {
@@ -53,4 +54,16 @@
       font-weight: 100px; 
       
     }
-  
+
+    .button {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid green;
+
+  }
+
+  body {
+    background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
+  }
