@@ -10,11 +10,22 @@
 let userLocation;
 let savedLocations = [];
 
+//Array for hot drinks
+var hotDrinks = ["coffee liqueur", "Irish Coffee", "Swedish Coffee", "Talos Coffee", "Almond Chocolate Coffee",
+"Kioki Coffee", "Hot Creamy Bush", "Afternoon", "Apple Cider Punch #1", "Danbooka", "Fuzzy Asshole", "Karsk",
+"Melya", "Mulled Wine", "Tennesee Mud"]
+
+//Array for cold drinks
+var coldDrinks = ["Black and Brown", "Black Forest Shake", "Brandon and Will's Coke Float", "Butter Baby", 
+"California Root Beer", "Cherry Rum", "Chicago Fizz", "Chocolate Milk", "Dragonfly", "Egg Cream", "Gin Cooler",
+"Grizzly Bear", "Lady Love Fizz", "Mint Julep", "Mojito", "Moscow Mule", "Oreo Mudslide", "Pineapple Paloma",
+"Rum Runner", "Strawberry Daiquiri"]
+
 // On click events to capture when find drinks button is pressed
 $("#location-search").on("click", function (event) {
   userLocation = $(".user-location").val().trim();
   event.preventDefault();
-  console.log(userLocation);
+  // console.log(userLocation);
   getWeather();
 });
 
@@ -37,7 +48,6 @@ function getWeather() {
       //Pull temp out out of returned array
       .then(function (response) {
           console.log(response);
-          console.log(response.main.temp);
           var userTemp = response.main.temp;
           console.log(userTemp);
           // If you have not searched this city before, it pushes it to the array
@@ -45,69 +55,69 @@ function getWeather() {
               savedLocations.push(response.name);
           }
           //Check to see if what set of rules the temp falls in
-          if (userTemp <= 50) {
+          if (userTemp > 50) {
             //If outside temp < 50 degrees, recommend hot drinks
             // Need an array to pull hot drinks from
-            var hotDrinks = hotDrinks;
+            var randomCold = coldDrinks[Math.floor(Math.random()*coldDrinks.length)];
+            console.log(randomCold);
           } else {
             //If outside temp > 50, recommend cold drinks
             // Need an array of recommended drinks for this portion. Maybe the top 20 most popular drinks?
-            var coldDrinks = coldDrinks;
+            var randomHot = hotDrinks[Math.floor(Math.random()*hotDrinks.length)];
+            console.log(randomHot);
           }
+          locationSave();
+          //Code to update DOM with the returned drinks
           
       })
 
 
 }
-  
-
-      //Code to update DOM with the returned drinks
-
 
 
 // On click events to capture when the search button is pressed, or if user is not happy with the recommended drink
 
-// Ajax call for searching by drink name
-// $("#name-search").on("click", function (event) {
-//     drinkName = $("#drink-name").val().trim();
-//     event.preventDefault();
+//Ajax call for searching by drink name
+$("#name-search").on("click", function (event) {
+    drinkName = $("#drink-name").val().trim();
+    event.preventDefault();
 
-//     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
 
-//     // Perfoming an AJAX GET request to our queryURL
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     })
-//         .then(function (response) {
-//             console.log(response);
-//         });
+    // Perfoming an AJAX GET request to our queryURL
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+        .then(function (response) {
+            console.log(response);
+        });
 
-//       //Returns an array of info
+      //Returns an array of info
 
-//       //Code for updating DOM with returned info
+      //Code for updating DOM with returned info
 
-// });
+});
 
-// // Ajax call for searching by liquor type, might be able to throw this up into the ajax above
-// $("#liquor-search").on("click", function (event) {
-//     liquorName = $("#liquor-name").val().trim();
-//     event.preventDefault();
+// Ajax call for searching by liquor type, might be able to throw this up into the ajax above
+$("#liquor-search").on("click", function (event) {
+    liquorName = $("#liquor-name").val().trim();
+    event.preventDefault();
 
-//     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquorName;
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquorName;
 
-//     // Perfoming an AJAX GET request to our queryURL
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     })
-//         .then(function (response) {
-//             console.log(response);
-//         });
+    // Perfoming an AJAX GET request to our queryURL
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+        .then(function (response) {
+            console.log(response);
+        });
 
-//       //Returns an array of info
+      //Returns an array of info
 
-//       //Code for updating DOM with returned info
+      //Code for updating DOM with returned info
 
-// });
+});
 
