@@ -114,15 +114,16 @@ function getDrink(){
             // console.log(response.drinks[0].strDrink);
             // console.log(response.drinks[1]);
             for (i = 0; i < response.drinks.length; i++) {
-              console.log(response.drinks[i].strDrink);
-              console.log(response.drinks[i].strIngredient1, response.drinks[i].strIngredient2, response.drinks[i].strIngredient3,response.drinks[i].strIngredient4);
+              // console.log(response.drinks[i].strDrink);
+              // console.log(response.drinks[i].strIngredient1, response.drinks[i].strIngredient2, response.drinks[i].strIngredient3,response.drinks[i].strIngredient4);
               // console.log(response.drinks[i].strMeasure1, response.drinks[i].strMeasure2);
-              // console.log(response.drinks[i].strMeasure1, response.drinks[i].strIngredient1)
-              // var drinkName = response.drinks[i].strDrink;
-              // var instructions = response.drinks[i].strInstructions;
+              // console.log(response.drinks[i].strMeasure1, response.drinks[i].strIngredient1);
+              var drinkName = response.drinks[i].strDrink;
+              var instructions = response.drinks[i].strInstructions;
               var ingredients1 = response.drinks[i].strMeasure1 + response.drinks[i].strIngredient1;
               var ingredients2 = response.drinks[i].strMeasure2 + response.drinks[i].strIngredient2;
               var cocktailImg = response.drinks[i].strDrinkThumb + "/preview";
+              console.log(instructions);
               console.log(ingredients1, ingredients2);
               console.log(cocktailImg);
               // var drinkDiv = $("<div>");
