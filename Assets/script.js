@@ -66,7 +66,7 @@ function getWeather() {
 
 // On click events to capture when the search button is pressed, or if user is not happy with the recommended drink
 
-function getCold(){
+function getCold() {
   var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
   // Perfoming an AJAX GET request to our queryURL
@@ -83,6 +83,7 @@ function getCold(){
         } else {
           // console.log(Object.entries(response));
           // console.log(response);
+          //updateHTML();
           console.log(response.drinks[0]);
           var instructions = response.drinks[0].strInstructions;
           var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
@@ -110,6 +111,7 @@ function getHot() {
     })
         .then(function (response) {
           // console.log(Object.entries(response))
+          //updateHTML();
           var nameofDrink = response.drinks[0].strDrink;
           var instructions = response.drinks[0].strInstructions;
           var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
@@ -125,6 +127,9 @@ function getHot() {
         })
 }
 
+
+//Function for updating cards with the returned info
+//This function will be called in both getHot & getCold functions
 // function updateHTML() {
 
 // }
