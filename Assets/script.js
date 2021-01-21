@@ -12,7 +12,9 @@ let savedLocations = [];
 //Array for hot drinks
 var hotDrinks = ["coffee liqueur", "Irish Coffee", "Swedish Coffee", "Talos Coffee", "Almond Chocolate Coffee",
 "Kioki Coffee", "Hot Creamy Bush", "Afternoon", "Apple Cider Punch #1", "Danbooka", "Fuzzy Asshole", "Karsk",
-"Melya", "Mulled Wine", "Tennesee Mud"]
+"Melya", "Mulled Wine", "Tennesee Mud", "Spiking Coffee", "Cafe Savoy", "Mocha-Berry", "Jamaican Coffee", "Almond Chocolate Coffee",
+"H.D.", "Amaretto Tea", "Masala Chai", "Herbal Flame", "Rum Toddy", "Castillian Hot Chocolate", "Chocolate Drink", "Microwave Hot Cocoa",
+"Gluehwein"]
 
 // On click events to capture when find drinks button is pressed
 $("#location-search").on("click", function (event) {
@@ -84,7 +86,7 @@ function getCold() {
           // console.log(Object.entries(response));
           // console.log(response);
           //updateHTML();
-          console.log(response.drinks[0]);
+          console.log(response.drinks);
           var instructions = response.drinks[0].strInstructions;
           var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
           var ingredients2 = response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + ",";
