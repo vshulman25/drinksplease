@@ -10,7 +10,7 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: aqua;
+    background:green;
     padding: 2rem;
   }
   
@@ -77,4 +77,12 @@
   .card {
     margin: auto;
    
+  }
+  /*background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
+
+  }
+  */
+  .background{
+  background-image: url('assets\shutterstock_hero.jpg')
+
   }
