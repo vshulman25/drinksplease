@@ -64,6 +64,20 @@
 
   }
 
+  .card-section {
+    background: aqua;
+    text-align: center;
+    font-weight: 25;
+  }
+
+  .card-divider {
+    text-align: center;
+  }
+
+  .card {
+    margin: auto;
+   
+  }
   /*background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
 
   }
