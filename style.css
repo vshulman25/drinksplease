@@ -10,7 +10,7 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background:green;
+    background:pink;
     padding: 2rem;
   }
   
@@ -65,9 +65,10 @@
   }
 
   .card-section {
-    background: aqua;
+    background: yellow;
     text-align: center;
     font-weight: 25;
+    $global-radius: 20px;
   }
 
   .card-divider {
@@ -76,13 +77,30 @@
 
   .card {
     margin: auto;
+    $global-radius: 20px;
+    
    
   }
   /*background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
 
   }
   */
-  .background{
+  .background {
   background-image: url('assets\shutterstock_hero.jpg')
 
   }
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &: :before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 
+  }
+}

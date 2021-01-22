@@ -6,6 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Drinks, Please!</title>
+  <link rel="stylesheet" href="card.scss" />
   <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
@@ -14,24 +15,18 @@
 
 <body>
   <!--updated hero image -->
-  <img src="Assets/shutterstock_hero.jpg">
+  <img src="Assets/shutterstock_hero.jpg";>
   <div class="mobile-app-message-bar">
     <button class="camera-button">
       <i class="fa fa-camera" aria-hidden="true"></i>
     </button>
-    <div class="message-input">
-
-      <input type="text" name="" class="user-location" value="" placeholder="Enter in your location!" />
+    <input type="text" name="" class="user-location" value="" placeholder="Enter in your location!" />
     </div>
+    <!-- had to add in - for the class to get it called in the script -->
+    <input type="text" name="" class="user-location" placeholder="Enter in your location!" />
 
-    <div class="message-input">
-      <input type="text" name="" value="" placeholder="Hit me again" />
-
-      <!-- had to add in - for the class to get it called in the script -->
-      <input type="text" name="" class="user-location" placeholder="Enter in your location!" />
-
-    </div>
-    <!-- <button class="send-button">Find your drink!</button> -->
+  </div>
+  <!-- <button class="send-button">Find your drink!</button> -->
   </div>
 
   <h1>Please enter in your location!</h1>
@@ -43,31 +38,37 @@
   </div>
 
 
+
   <div class="card" style="width: 300px;">
     <div class="card-divider">
       Here is your drink!
     </div>
     <div class="card-section">
-    <img src="http://placehold.it/600x300">
-    <div class="card-section">
-      <h4>Drink Image</h4>
-      <p>Drink Name</p>
+      <img src="http://placehold.it/200x200">
+      <div class="card-section">
+        <h4>Drink Image</h4>
+        <p>Drink Name</p>
+      </div>
     </div>
-  </div>
-<br>
-<br>
-  <div class="card" style="width: 300px;">
-    <div class="card-divider">
-     Ingredients 
-    </div>
-    <div class="card-section">
-    <img src="http://placehold.it/600x300">
-    <div class="card-section">
-      <h4>Drink Image</h4>
-      <p>Drink Name</p>
-    </div>
-  </div>
+    <br>
+    <br>
+    <div class="card" style="width: 300px;">
+      <div class="card-divider">
+        Ingredients
+      </div>
+      <div class="card-section">
+        <img src="http://placehold.it/200x200">
+        <div class="card-section">
+          <h4>Drink Image</h4>
+          <p>Drink Name</p>
+        </div>
+      </div>
 
+
+      <div class="button-group align-center">
+
+        <button type="button" class="success button">Hit me again!</button>
+      </div>
 
 </body>
 
@@ -84,4 +85,3 @@
 
 
 </html>
-
