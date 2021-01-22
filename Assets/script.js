@@ -6,21 +6,15 @@
 
 // We will need global variables defined if they need to be called by multiple functions
 let drinkName;
-// let liquorName;
 let userLocation;
 let savedLocations = [];
-let savedDrinks = [];
 
 //Array for hot drinks
 var hotDrinks = ["coffee liqueur", "Irish Coffee", "Swedish Coffee", "Talos Coffee", "Almond Chocolate Coffee",
 "Kioki Coffee", "Hot Creamy Bush", "Afternoon", "Apple Cider Punch #1", "Danbooka", "Fuzzy Asshole", "Karsk",
-"Melya", "Mulled Wine", "Tennesee Mud"]
-
-//Array for cold drinks
-var coldDrinks = ["Black and Brown", "Black Forest Shake", "Brandon and Will's Coke Float", "Butter Baby", 
-"California Root Beer", "Cherry Rum", "Chicago Fizz", "Chocolate Milk", "Dragonfly", "Egg Cream", "Gin Cooler",
-"Grizzly Bear", "Lady Love Fizz", "Mint Julep", "Mojito", "Moscow Mule", "Oreo Mudslide", "Pineapple Paloma",
-"Rum Runner", "Strawberry Daiquiri"]
+"Melya", "Mulled Wine", "Tennesee Mud", "Spiking Coffee", "Cafe Savoy", "Mocha-Berry", "Jamaican Coffee", "Almond Chocolate Coffee",
+"H.D.", "Amaretto Tea", "Masala Chai", "Herbal Flame", "Rum Toddy", "Castillian Hot Chocolate", "Chocolate Drink", "Microwave Hot Cocoa",
+"Gluehwein"]
 
 // On click events to capture when find drinks button is pressed
 $("#location-search").on("click", function (event) {
@@ -30,20 +24,18 @@ $("#location-search").on("click", function (event) {
   getWeather();
 });
 
-$("#name-search").on("click", function (event) {
-  drinkName = $(".drink-name").val().trim();
-  event.preventDefault();
-  console.log(drinkName);
-  getDrink();
-});
+// $("#name-search").on("click", function (event) {
+//   drinkName = $(".drink-name").val().trim();
+//   event.preventDefault();
+//   console.log(drinkName);
+//   getDrink();
+// });
 
 // Code to save previously searched locations to the local storage
 function save() {
   localStorage.setItem("locationofuser", JSON.stringify(savedLocations));
-  localStorage.setItem("searcheddrinks", JSON.stringify(savedDrinks));
+  // localStorage.setItem("searcheddrinks", JSON.stringify(savedDrinks));
 }
-
-// Code to save previously searched drinks/alcohol to the local storage
 
 //Ajax call for weather API
 function getWeather() {
@@ -65,89 +57,54 @@ function getWeather() {
           }
           //Check to see if what set of rules the temp falls in
           if (userTemp > 50) {
-            //If outside temp < 50 degrees, recommend hot drinks
-            // Need an array to pull hot drinks from
-            var randomDrink = coldDrinks[Math.floor(Math.random()*coldDrinks.length)];
-            console.log(randomDrink);
+            getCold();
           } else {
-            //If outside temp > 50, recommend cold drinks
-            // Need an array of recommended drinks for this portion. Maybe the top 20 most popular drinks?
-            var randomDrink = hotDrinks[Math.floor(Math.random()*hotDrinks.length)];
-            console.log(randomDrink);
+            getHot();
           }
-          var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + randomDrink;
-
-            // Perfoming an AJAX GET request to our queryURL
-            $.ajax({
-              url: queryURL,
-              method: "GET"
-            })
-                .then(function (response) {
-                  console.log(response);
-                })
-          
           save();
-          //Code to update DOM with the returned drinks
-          
       })
-
-
 }
 
 
 // On click events to capture when the search button is pressed, or if user is not happy with the recommended drink
 
-function getDrink(){
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
+function getCold() {
+  var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-    // Perfoming an AJAX GET request to our queryURL
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-        .then(function (response) {
-          $("#testingarea").empty();
-            console.log(response);
-            if (savedDrinks.includes(drinkName) === false ) {
-              savedDrinks.push(drinkName);
-            }
-            // console.log(response.drinks[0].strDrink);
-            // console.log(response.drinks[1]);
-            for (i = 0; i < response.drinks.length; i++) {
-              // console.log(response.drinks[i].strDrink);
-              // console.log(response.drinks[i].strIngredient1, response.drinks[i].strIngredient2, response.drinks[i].strIngredient3,response.drinks[i].strIngredient4);
-              // console.log(response.drinks[i].strMeasure1, response.drinks[i].strMeasure2);
-              // console.log(response.drinks[i].strMeasure1, response.drinks[i].strIngredient1);
-              var nameofDrink = response.drinks[i].strDrink;
-              var instructions = response.drinks[i].strInstructions;
-              var ingredients1 = response.drinks[i].strMeasure1 + response.drinks[i].strIngredient1 + ",";
-              var ingredients2 = response.drinks[i].strMeasure2 + response.drinks[i].strIngredient2 + ",";
-              var ingredients3 = response.drinks[i].strMeasure3 + response.drinks[i].strIngredient3 + ",";
-              var cocktailImg = response.drinks[i].strDrinkThumb + "/preview";
-              console.log(instructions);
-              console.log(ingredients1, ingredients2, ingredients3);
-              console.log(cocktailImg);
-              console.log(nameofDrink);
-              // var drinkDiv = $("<div>");
-              // drinkDiv.html(nameofDrink);
-              // $("#testingarea").prepend(drinkDiv);
-              
-            }
-            save();
-        });
-
-      //Returns an array of info
-
-      //Code for updating DOM with returned info
-
+  // Perfoming an AJAX GET request to our queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+      .then(function (response) {
+        console.log(response)
+        var nameofDrink = response.drinks[0].strDrink;
+        console.log(hotDrinks.includes(nameofDrink));
+        if (hotDrinks.includes(nameofDrink)) {
+          getCold();
+        } else {
+          // console.log(Object.entries(response));
+          // console.log(response);
+          //updateHTML();
+          console.log(response.drinks);
+          var instructions = response.drinks[0].strInstructions;
+          var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
+          var ingredients2 = response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + ",";
+          var ingredients3 = response.drinks[0].strMeasure3 + response.drinks[0].strIngredient3 + ",";
+          var cocktailImg = response.drinks[0].strDrinkThumb + "/preview";
+          console.log(instructions);
+          console.log(ingredients1, ingredients2, ingredients3);
+          console.log(cocktailImg);
+          console.log(nameofDrink);
+        }
+      })
+      
 };
 
-// Ajax call for searching by liquor type, might be able to throw this up into the ajax above
-$("#liquor-search").on("click", function (event) {
-    liquorName = $("#liquor-name").val().trim();
-    event.preventDefault();
-
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquorName;
+function getHot() {
+  var randomDrink = hotDrinks[Math.floor(Math.random()*hotDrinks.length)];
+    console.log(randomDrink);
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + randomDrink;
 
     // Perfoming an AJAX GET request to our queryURL
     $.ajax({
@@ -155,12 +112,30 @@ $("#liquor-search").on("click", function (event) {
       method: "GET"
     })
         .then(function (response) {
-            console.log(response);
-        });
+          // console.log(Object.entries(response))
+          //updateHTML();
+          var nameofDrink = response.drinks[0].strDrink;
+          var instructions = response.drinks[0].strInstructions;
+          var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
+          var ingredients2 = response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + ",";
+          var ingredients3 = response.drinks[0].strMeasure3 + response.drinks[0].strIngredient3 + ",";
+          var cocktailImg = response.drinks[0].strDrinkThumb + "/preview";
+          console.log(response.drinks);
+          console.log(instructions);
+          console.log(ingredients1, ingredients2, ingredients3);
+          console.log(cocktailImg);
+          console.log(nameofDrink);
+          // console.log(Object.entries(response));
+        })
+}
 
-      //Returns an array of info
 
-      //Code for updating DOM with returned info
+//Function for updating cards with the returned info
+//This function will be called in both getHot & getCold functions
+// function updateHTML() {
 
-});
+// }
+
+
+
 
