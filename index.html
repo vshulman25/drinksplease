@@ -6,6 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Drinks, Please!</title>
+  <link rel="stylesheet" href="card.scss" />
   <link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
@@ -14,19 +15,16 @@
 
 <body>
   <!--updated hero image -->
-  <img src="Assets/shutterstock_hero.jpg">
+  <img src="Assets/shutterstock_hero.jpg";>
   <div class="mobile-app-message-bar">
     <button class="camera-button">
       <i class="fa fa-camera" aria-hidden="true"></i>
     </button>
-    <div class="message-input">
-      <!-- had to add in - for the class to get it called in the script -->
-      <input type="text" name="" class="user-location" placeholder="Enter in your location!" />
+    <input type="text" name="" class="user-location" value="" placeholder="Enter in your location!" />
 
-    </div>
-    <!-- <button class="send-button">Find your drink!</button> -->
   </div>
-
+  <!-- <button class="send-button">Find your drink!</button> -->
+  
   <h1>Please enter in your location!</h1>
 
   <!-- added and centered button -->
@@ -36,12 +34,13 @@
   </div>
 
 
+
   <div class="card" style="width: 300px;">
     <div class="" style="background-color: lightgrey;">
       <h4 style="text-align:center;">Cheers!</h4>
     </div>
     <div class="card-section">
-      <img class="drinkImg" src="http://placehold.it/600x300">
+      <img class="drinkImg" src="http://placehold.it/200x200">
       <div class="card-section">
         <h4 class="drinkName">Drink Name</h4>
       </div>
