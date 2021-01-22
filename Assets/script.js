@@ -18,6 +18,10 @@ $("#location-search").on("click", function (event) {
   getWeather();
 });
 
+$("#random").on("click", function (event) {
+  event.preventDefault();
+  getRandom();
+});
 
 // Code to save previously searched locations to the local storage
 function save() {
@@ -126,6 +130,36 @@ function getHot() {
         })
 }
 
+function getRandom() {
+  var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
+  // Perfoming an AJAX GET request to our queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+      .then(function (response) {
+        $("#infolist").empty();
+        $("#Ingredientlist").empty();
+        var nameofDrink = response.drinks[0].strDrink;
+        var instructions = response.drinks[0].strInstructions;
+        var ingredients1 = response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1;
+        var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
+        var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
+        var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+        var imgURL = response.drinks[0].strDrinkThumb + "/preview";
+        $(".drinkImg").attr("src", imgURL);
+        $(".drinkName").html(nameofDrink);
+        $(".ing1").html(ingredients1);
+        $(".ing2").html(ingredients2);
+        $(".ing3").html(ingredients3);
+        $(".ing4").html(ingredients4);
+        $(".instructions").html(instructions);
+        // console.log(response.drinks);
+        // console.log(instructions);
+        // console.log(nameofDrink);
+        // console.log(Object.entries(response));
+      })
+}
 
 
