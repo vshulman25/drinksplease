@@ -1,9 +1,3 @@
-// We need these in our script for searching
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-// <script src="Assets/script.js"></script>
-
 // We will need global variables defined if they need to be called by multiple functions
 let drinkName;
 let userLocation;
@@ -24,12 +18,6 @@ $("#location-search").on("click", function (event) {
   getWeather();
 });
 
-// $("#name-search").on("click", function (event) {
-//   drinkName = $(".drink-name").val().trim();
-//   event.preventDefault();
-//   console.log(drinkName);
-//   getDrink();
-// });
 
 // Code to save previously searched locations to the local storage
 function save() {
@@ -83,19 +71,24 @@ function getCold() {
         if (hotDrinks.includes(nameofDrink)) {
           getCold();
         } else {
-          // console.log(Object.entries(response));
-          // console.log(response);
-          //updateHTML();
-          console.log(response.drinks);
+          var nameofDrink = response.drinks[0].strDrink;
           var instructions = response.drinks[0].strInstructions;
-          var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
-          var ingredients2 = response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + ",";
-          var ingredients3 = response.drinks[0].strMeasure3 + response.drinks[0].strIngredient3 + ",";
-          var cocktailImg = response.drinks[0].strDrinkThumb + "/preview";
-          console.log(instructions);
-          console.log(ingredients1, ingredients2, ingredients3);
-          console.log(cocktailImg);
-          console.log(nameofDrink);
+          var ingredients1 = response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1;
+          var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
+          var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
+          var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+          var imgURL = response.drinks[0].strDrinkThumb + "/preview";
+          $(".drinkImg").attr("src", imgURL);
+          $(".drinkName").html(nameofDrink);
+          $(".ing1").html(ingredients1);
+          $(".ing2").html(ingredients2);
+          $(".ing3").html(ingredients3);
+          $(".ing4").html(ingredients4);
+          $(".instructions").html(instructions);
+          // console.log(response.drinks);
+          // console.log(instructions);
+          // console.log(nameofDrink);
+          // console.log(Object.entries(response));
         }
       })
       
@@ -112,29 +105,26 @@ function getHot() {
       method: "GET"
     })
         .then(function (response) {
-          // console.log(Object.entries(response))
-          //updateHTML();
           var nameofDrink = response.drinks[0].strDrink;
           var instructions = response.drinks[0].strInstructions;
-          var ingredients1 = response.drinks[0].strMeasure1 + response.drinks[0].strIngredient1 + ",";
-          var ingredients2 = response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + ",";
-          var ingredients3 = response.drinks[0].strMeasure3 + response.drinks[0].strIngredient3 + ",";
-          var cocktailImg = response.drinks[0].strDrinkThumb + "/preview";
-          console.log(response.drinks);
-          console.log(instructions);
-          console.log(ingredients1, ingredients2, ingredients3);
-          console.log(cocktailImg);
-          console.log(nameofDrink);
+          var ingredients1 = response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1;
+          var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
+          var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
+          var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+          var imgURL = response.drinks[0].strDrinkThumb + "/preview";
+          $(".drinkImg").attr("src", imgURL);
+          $(".drinkName").html(nameofDrink);
+          $(".ing1").html(ingredients1);
+          $(".ing2").html(ingredients2);
+          $(".ing3").html(ingredients3);
+          $(".ing4").html(ingredients4);
+          $(".instructions").html(instructions);
+          // console.log(response.drinks);
+          // console.log(instructions);
+          // console.log(nameofDrink);
           // console.log(Object.entries(response));
         })
 }
-
-
-//Function for updating cards with the returned info
-//This function will be called in both getHot & getCold functions
-// function updateHTML() {
-
-// }
 
 
 
