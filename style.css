@@ -65,22 +65,24 @@
   }
 
   .card-section {
-    background: yellow;
+    background: lightblue;
     text-align: center;
     font-weight: 25;
-    $global-radius: 20px;
-  }
+     }
 
   .card-divider {
     text-align: center;
+    border-radius: 30%;
   }
 
   .card {
     margin: auto;
-    $global-radius: 20px;
+    border-radius: 25px;
+    text-align: center;
     
    
   }
+
   /*background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
 
   }
@@ -90,7 +92,7 @@
 
   }
 
-.hero {
+ .hero { 
   position: relative;
   display: flex;
   justify-content: center;
@@ -101,6 +103,10 @@
     content: '';
     position: absolute;
     top: 0px;
-    right: 
-  }
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('assets\shutterstock_hero.jpg');
+  } 
 }
+
