@@ -139,8 +139,6 @@ function getRandom() {
     method: "GET"
   })
       .then(function (response) {
-        $("#infolist").empty();
-        $("#Ingredientlist").empty();
         var nameofDrink = response.drinks[0].strDrink;
         var instructions = response.drinks[0].strInstructions;
         var ingredients1 = response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1;
