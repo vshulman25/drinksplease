@@ -81,6 +81,9 @@ function getCold() {
           var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
           var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
           var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+          var ingredients5 = response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5;
+          var ingredients6 = response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6;
+          var ingredients7 = response.drinks[0].strMeasure7 + " " + response.drinks[0].strIngredient7;
           var ingredient1 = response.drinks[0].strIngredient1;
           var measure1 = response.drinks[0].strMeasure1;
           var ingredient2 = response.drinks[0].strIngredient2;
@@ -89,6 +92,12 @@ function getCold() {
           var ingredient3 = response.drinks[0].strIngredient3;
           var measure4 = response.drinks[0].strMeasure4;
           var ingredient4 = response.drinks[0].strIngredient4;
+          var measure5 = response.drinks[0].strMeasure5;
+          var ingredient5 = response.drinks[0].strIngredient5;
+          var measure6 = response.drinks[0].strMeasure6;
+          var ingredient6 = response.drinks[0].strIngredient6;
+          var measure7 = response.drinks[0].strMeasure7;
+          var ingredient7 = response.drinks[0].strIngredient7;
           var imgURL = response.drinks[0].strDrinkThumb + "/preview";
           $("#drinkImg").attr("src", imgURL);
           $("#drinkName").html(nameofDrink);
@@ -96,6 +105,9 @@ function getCold() {
           $("#ing2").empty().hide();
           $("#ing3").empty().hide();
           $("#ing4").empty().hide();
+          $("#ing5").empty().hide();
+          $("#ing6").empty().hide();
+          $("#ing7").empty().hide();
           if (measure1 === null && ingredient1 != null) {
             $("#ing1").html(ingredient1).show();
           }
@@ -125,6 +137,33 @@ function getCold() {
             console.log(ingredient4);
           } else {
             $("#ing4").html(ingredients4).show();
+          }
+          if (measure5 === null && ingredient5 === null ) {
+            console.log(ingredients5);
+            $("#ing5").empty().hide();
+          } else if (measure5 === null && ingredient5 != null) {
+            $("#ing5").html(ingredient5).show();
+            console.log(ingredient5);
+          } else {
+            $("#ing5").html(ingredients5).show();
+          }
+          if (measure6 === null && ingredient6 === null ) {
+            console.log(ingredients6);
+            $("#ing6").empty().hide();
+          } else if (measure6 === null && ingredient6 != null) {
+            $("#ing6").html(ingredient6).show();
+            console.log(ingredient6);
+          } else {
+            $("#ing6").html(ingredients6).show();
+          }
+          if (measure7 === null && ingredient7 === null ) {
+            console.log(ingredients7);
+            $("#ing7").empty().hide();
+          } else if (measure7 === null && ingredient7 != null) {
+            $("#ing7").html(ingredient7).show();
+            console.log(ingredient7);
+          } else {
+            $("#ing7").html(ingredients7).show();
           }
           $("#instructions").html(instructions);
           console.log(response.drinks[0]);
@@ -154,6 +193,9 @@ function getHot() {
           var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
           var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
           var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+          var ingredients5 = response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5;
+          var ingredients6 = response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6;
+          var ingredients7 = response.drinks[0].strMeasure7 + " " + response.drinks[0].strIngredient7;
           var ingredient1 = response.drinks[0].strIngredient1;
           var measure1 = response.drinks[0].strMeasure1;
           var ingredient2 = response.drinks[0].strIngredient2;
@@ -162,6 +204,12 @@ function getHot() {
           var ingredient3 = response.drinks[0].strIngredient3;
           var measure4 = response.drinks[0].strMeasure4;
           var ingredient4 = response.drinks[0].strIngredient4;
+          var measure5 = response.drinks[0].strMeasure5;
+          var ingredient5 = response.drinks[0].strIngredient5;
+          var measure6 = response.drinks[0].strMeasure6;
+          var ingredient6 = response.drinks[0].strIngredient6;
+          var measure7 = response.drinks[0].strMeasure7;
+          var ingredient7 = response.drinks[0].strIngredient7;
           var imgURL = response.drinks[0].strDrinkThumb + "/preview";
           $("#drinkImg").attr("src", imgURL);
           $("#drinkName").html(nameofDrink);
@@ -169,6 +217,9 @@ function getHot() {
           $("#ing2").empty().hide();
           $("#ing3").empty().hide();
           $("#ing4").empty().hide();
+          $("#ing5").empty().hide();
+          $("#ing6").empty().hide();
+          $("#ing7").empty().hide();
           if (measure1 === null && ingredient1 != null) {
             $("#ing1").html(ingredient1).show();
           }
@@ -199,6 +250,33 @@ function getHot() {
           } else {
             $("#ing4").html(ingredients4).show();
           }
+          if (measure5 === null && ingredient5 === null ) {
+            console.log(ingredients5);
+            $("#ing5").empty().hide();
+          } else if (measure5 === null && ingredient5 != null) {
+            $("#ing5").html(ingredient5).show();
+            console.log(ingredient5);
+          } else {
+            $("#ing5").html(ingredients5).show();
+          }
+          if (measure6 === null && ingredient6 === null ) {
+            console.log(ingredients6);
+            $("#ing6").empty().hide();
+          } else if (measure6 === null && ingredient6 != null) {
+            $("#ing6").html(ingredient6).show();
+            console.log(ingredient6);
+          } else {
+            $("#ing6").html(ingredients6).show();
+          }
+          if (measure7 === null && ingredient7 === null ) {
+            console.log(ingredients7);
+            $("#ing7").empty().hide();
+          } else if (measure7 === null && ingredient7 != null) {
+            $("#ing7").html(ingredient7).show();
+            console.log(ingredient7);
+          } else {
+            $("#ing7").html(ingredients7).show();
+          }
           $("#instructions").html(instructions);
           console.log(response.drinks[0]);
           // console.log(response.drinks);
@@ -223,6 +301,9 @@ function getRandom() {
         var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
         var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
         var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+        var ingredients5 = response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5;
+        var ingredients6 = response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6;
+        var ingredients7 = response.drinks[0].strMeasure7 + " " + response.drinks[0].strIngredient7;
         var ingredient1 = response.drinks[0].strIngredient1;
         var measure1 = response.drinks[0].strMeasure1;
         var ingredient2 = response.drinks[0].strIngredient2;
@@ -231,6 +312,12 @@ function getRandom() {
         var ingredient3 = response.drinks[0].strIngredient3;
         var measure4 = response.drinks[0].strMeasure4;
         var ingredient4 = response.drinks[0].strIngredient4;
+        var measure5 = response.drinks[0].strMeasure5;
+        var ingredient5 = response.drinks[0].strIngredient5;
+        var measure6 = response.drinks[0].strMeasure6;
+        var ingredient6 = response.drinks[0].strIngredient6;
+        var measure7 = response.drinks[0].strMeasure7;
+        var ingredient7 = response.drinks[0].strIngredient7;
         var imgURL = response.drinks[0].strDrinkThumb + "/preview";
         $("#drinkImg").attr("src", imgURL);
         $("#drinkName").html(nameofDrink);
@@ -238,6 +325,9 @@ function getRandom() {
         $("#ing2").empty().hide();
         $("#ing3").empty().hide();
         $("#ing4").empty().hide();
+        $("#ing5").empty().hide();
+        $("#ing6").empty().hide();
+        $("#ing7").empty().hide();
         if (measure1 === null && ingredient1 != null) {
           $("#ing1").html(ingredient1).show();
         }
@@ -268,6 +358,33 @@ function getRandom() {
         } else {
           $("#ing4").html(ingredients4).show();
         }
+        if (measure5 === null && ingredient5 === null ) {
+          console.log(ingredients5);
+          $("#ing5").empty().hide();
+        } else if (measure5 === null && ingredient5 != null) {
+          $("#ing5").html(ingredient5).show();
+          console.log(ingredient5);
+        } else {
+          $("#ing5").html(ingredients5).show();
+        }
+        if (measure6 === null && ingredient6 === null ) {
+          console.log(ingredients6);
+          $("#ing6").empty().hide();
+        } else if (measure6 === null && ingredient6 != null) {
+          $("#ing6").html(ingredient6).show();
+          console.log(ingredient6);
+        } else {
+          $("#ing6").html(ingredients6).show();
+        }
+        if (measure7 === null && ingredient7 === null ) {
+          console.log(ingredients7);
+          $("#ing7").empty().hide();
+        } else if (measure7 === null && ingredient7 != null) {
+          $("#ing7").html(ingredient7).show();
+          console.log(ingredient7);
+        } else {
+          $("#ing7").html(ingredients7).show();
+        }
         $("#instructions").html(instructions);
         console.log(response.drinks[0]);
         // console.log(response.drinks);
@@ -277,4 +394,102 @@ function getRandom() {
       })
 }
 
-
+// Tried to make a function for the different api calls. Needs more work
+// templateCall(function() {
+//   var nameofDrink = response.drinks[0].strDrink;
+//   var instructions = response.drinks[0].strInstructions;
+//   var ingredients1 = response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1;
+//   var ingredients2 = response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2;
+//   var ingredients3 = response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3;
+//   var ingredients4 = response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4;
+//   var ingredients5 = response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5;
+//   var ingredients6 = response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6;
+//   var ingredients7 = response.drinks[0].strMeasure7 + " " + response.drinks[0].strIngredient7;
+//   var ingredient1 = response.drinks[0].strIngredient1;
+//   var measure1 = response.drinks[0].strMeasure1;
+//   var ingredient2 = response.drinks[0].strIngredient2;
+//   var measure2 = response.drinks[0].strMeasure2;
+//   var measure3 = response.drinks[0].strMeasure3;
+//   var ingredient3 = response.drinks[0].strIngredient3;
+//   var measure4 = response.drinks[0].strMeasure4;
+//   var ingredient4 = response.drinks[0].strIngredient4;
+//   var measure5 = response.drinks[0].strMeasure5;
+//   var ingredient5 = response.drinks[0].strIngredient5;
+//   var measure6 = response.drinks[0].strMeasure6;
+//   var ingredient6 = response.drinks[0].strIngredient6;
+//   var measure7 = response.drinks[0].strMeasure7;
+//   var ingredient7 = response.drinks[0].strIngredient7;
+//   var imgURL = response.drinks[0].strDrinkThumb + "/preview";
+//   $("#drinkImg").attr("src", imgURL);
+//   $("#drinkName").html(nameofDrink);
+//   $("#ing1").empty().hide();
+//   $("#ing2").empty().hide();
+//   $("#ing3").empty().hide();
+//   $("#ing4").empty().hide();
+//   $("#ing5").empty().hide();
+//   $("#ing6").empty().hide();
+//   $("#ing7").empty().hide();
+//   if (measure1 === null && ingredient1 != null) {
+//     $("#ing1").html(ingredient1).show();
+//   }
+//   else {
+//     $("#ing1").html(ingredients1).show();
+//   }
+//   if (measure2 === null && ingredient2 != null) {
+//     $("#ing2").html(ingredient2).show();
+//   }
+//   else {
+//     $("#ing2").html(ingredients2).show();
+//   }
+//   if (measure3 === null && ingredient3 === null) {
+//     console.log(ingredients3);
+//     $("#ing3").empty().hide();
+//   } else if (measure3 === null && ingredient3 != null) {
+//     $("#ing3").html(ingredient3).show();
+//     console.log(ingredient3);
+//   } else {
+//     $("#ing3").html(ingredients3).show();
+//   }
+//   if (measure4 === null && ingredient4 === null ) {
+//     console.log(ingredients4);
+//     $("#ing4").empty().hide();
+//   } else if (measure4 === null && ingredient4 != null) {
+//     $("#ing4").html(ingredient4).show();
+//     console.log(ingredient4);
+//   } else {
+//     $("#ing4").html(ingredients4).show();
+//   }
+//   if (measure5 === null && ingredient5 === null ) {
+//     console.log(ingredients5);
+//     $("#ing5").empty().hide();
+//   } else if (measure5 === null && ingredient5 != null) {
+//     $("#ing5").html(ingredient5).show();
+//     console.log(ingredient5);
+//   } else {
+//     $("#ing5").html(ingredients5).show();
+//   }
+//   if (measure6 === null && ingredient6 === null ) {
+//     console.log(ingredients6);
+//     $("#ing6").empty().hide();
+//   } else if (measure6 === null && ingredient6 != null) {
+//     $("#ing6").html(ingredient6).show();
+//     console.log(ingredient6);
+//   } else {
+//     $("#ing6").html(ingredients6).show();
+//   }
+//   if (measure7 === null && ingredient7 === null ) {
+//     console.log(ingredients7);
+//     $("#ing7").empty().hide();
+//   } else if (measure7 === null && ingredient7 != null) {
+//     $("#ing7").html(ingredient7).show();
+//     console.log(ingredient7);
+//   } else {
+//     $("#ing7").html(ingredients7).show();
+//   }
+//   $("#instructions").html(instructions);
+//   console.log(response.drinks[0]);
+//   console.log(response.drinks);
+//   console.log(instructions);
+//   console.log(nameofDrink);
+//   console.log(Object.entries(response));
+// })
