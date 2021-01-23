@@ -1,5 +1,5 @@
 // We will need global variables defined if they need to be called by multiple functions
-let drinkName;
+// let drinkName;
 let userLocation;
 let savedLocations = [];
 
@@ -90,8 +90,8 @@ function getCold() {
           var measure4 = response.drinks[0].strMeasure4;
           var ingredient4 = response.drinks[0].strIngredient4;
           var imgURL = response.drinks[0].strDrinkThumb + "/preview";
-          $(".drinkImg").attr("src", imgURL);
-          $(".drinkName").html(nameofDrink);
+          $("#drinkImg").attr("src", imgURL);
+          $("#drinkName").html(nameofDrink);
           $("#ing1").empty().hide();
           $("#ing2").empty().hide();
           $("#ing3").empty().hide();
@@ -126,7 +126,7 @@ function getCold() {
           } else {
             $("#ing4").html(ingredients4).show();
           }
-          $(".instructions").html(instructions);
+          $("#instructions").html(instructions);
           console.log(response.drinks[0]);
           // console.log(response.drinks);
           // console.log(instructions);
@@ -163,8 +163,8 @@ function getHot() {
           var measure4 = response.drinks[0].strMeasure4;
           var ingredient4 = response.drinks[0].strIngredient4;
           var imgURL = response.drinks[0].strDrinkThumb + "/preview";
-          $(".drinkImg").attr("src", imgURL);
-          $(".drinkName").html(nameofDrink);
+          $("#drinkImg").attr("src", imgURL);
+          $("#drinkName").html(nameofDrink);
           $("#ing1").empty().hide();
           $("#ing2").empty().hide();
           $("#ing3").empty().hide();
@@ -199,7 +199,7 @@ function getHot() {
           } else {
             $("#ing4").html(ingredients4).show();
           }
-          $(".instructions").html(instructions);
+          $("#instructions").html(instructions);
           console.log(response.drinks[0]);
           // console.log(response.drinks);
           // console.log(instructions);
@@ -232,8 +232,8 @@ function getRandom() {
         var measure4 = response.drinks[0].strMeasure4;
         var ingredient4 = response.drinks[0].strIngredient4;
         var imgURL = response.drinks[0].strDrinkThumb + "/preview";
-        $(".drinkImg").attr("src", imgURL);
-        $(".drinkName").html(nameofDrink);
+        $("#drinkImg").attr("src", imgURL);
+        $("#drinkName").html(nameofDrink);
         $("#ing1").empty().hide();
         $("#ing2").empty().hide();
         $("#ing3").empty().hide();
@@ -268,7 +268,7 @@ function getRandom() {
         } else {
           $("#ing4").html(ingredients4).show();
         }
-        $(".instructions").html(instructions);
+        $("#instructions").html(instructions);
         console.log(response.drinks[0]);
         // console.log(response.drinks);
         // console.log(instructions);
