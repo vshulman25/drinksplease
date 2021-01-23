@@ -8,6 +8,8 @@
   <title>Drinks, Please!</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./Assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" />
+<!-- google fonts insert -->
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 </head>
@@ -17,7 +19,7 @@
   <!--Keep the div open to display the hero image on the full page-->
   <!--styling for hero image and header text-->
   <div class="hero-image">
-    <h1 style="color: black;">Thirsty? Enter your current city location for a drink suggestion!</h1>
+    <h1 id="thirsty" >Thirsty? Enter your current city location for a drink suggestion!</h1>
     <div class="button-group align-center">
       <!--User interactive; user types in their city location. Logic in API will return a warm drink if the temperature is <50F and a cold drink if the local temperature is >50F.-->
       <input type="text" name="" class="user-location" value="" placeholder="Enter the name of your city here"
@@ -30,7 +32,7 @@
 <!--Cards for the drink name, drink image and ingredient list and instructions -->
     <div class="card" style="width: 300px;">
       <div class="" style="background-color: lightgrey;">
-        <h4 style="text-align:center;">Cheers!</h4>
+        <h4 id="cheers">Cheers!</h4>
       </div>
 
       <!--Card to display drink image -->
