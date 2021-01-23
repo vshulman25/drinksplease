@@ -9,16 +9,15 @@
             align-items: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    background:pink;
-    padding: 2rem;
+            justify-content: center; 
+    padding: 4rem;
   }
   
   .mobile-app-message-bar .camera-button {
     -webkit-flex-shrink: 1;
         -ms-flex-negative: 1;
             flex-shrink: 1;
-    padding: 1rem;
+    
   }
   
   .mobile-app-message-bar .camera-button i,
@@ -45,14 +44,19 @@
         -ms-flex-negative: 1;
             flex-shrink: 1;
     padding: 1rem;
-    margin: 0;
+    margin: 10px;
     font-weight: 600;
   }
 
   h1{
       text-align: center;
-      font-weight: 100px; 
-      
+      font-weight: 250px; 
+      background-color:rgb(0, 255, 34);
+
+
+
+  }
+
     }
 
     .button {
@@ -60,12 +64,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 3px solid green;
+      
 
-  }
+  
+
+}
 
   .card-section {
-    background: yellow;
+    background: white;
     text-align: center;
     font-weight: 25;
     $global-radius: 20px;
@@ -77,15 +83,9 @@
 
   .card {
     margin: auto;
-    background-color: aqua;
     $global-radius: 20px;
+  }
     
-   
-  }
-  /*background-image: url("2976-drink-glass-and-black-background-download-hq-wallpaper_1366x768.jpg");
-
-  }
-  */
   .background {
   background-image: url('Assets/shutterstock_hero.jpg')
 
