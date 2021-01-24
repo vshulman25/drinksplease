@@ -17,14 +17,17 @@
   <!--Keep the div open to display the hero image on the full page-->
   <!--styling for hero image and header text-->
   <div class="hero-image">
-    <h1 style="color: black;">Thirsty? Enter your current city location for a drink suggestion!</h1>
+    <h1 style="color: black; background-color: linear-gradient white magenta">Thirsty? Enter your current city location for a drink suggestion!</h1>
     <div class="button-group align-center">
       <!--User interactive; user types in their city location. Logic in API will return a warm drink if the temperature is <50F and a cold drink if the local temperature is >50F.-->
       <input type="text" name="" class="user-location" value="" placeholder="Enter the name of your city here"
-        style="width: 300px;">
+        style="width: 300px; border: 5px solid #000000">
     </div>
     <div class="button-group align-center">
-      <button type="button" class="button" id="location-search">Find your drink!</button>
+      <button type="button" class="button" style="margin-right: 20px; background-color: magenta" id="location-search">Find your drink!</button>
+      <!--If you don't care for the suggested drink, this will use the same location input and suggest a different drink -->
+        <button type="button" class="button" style="background-color:magenta;" id="random">Hit me again!</button>
+    
     </div>
 
 <!--Cards for the drink name, drink image and ingredient list and instructions -->
@@ -42,8 +45,7 @@
         </div>
       </div>
 
-      <br>
-      <br>
+  
       <!--Card to display ingredient list -->
       <div class="card" style="width: 300px;">
         <div class="" style="background-color: lightgrey;">
@@ -61,13 +63,10 @@
           <h4 style="text-align:center;">Instructions</h4>
           <p id="instructions"></p>
         </div>
-<!--If you don't care for the suggested drink, this will use the same location input and suggest a different drink -->
-        <div class="button-group align-center">
-          <button type="button" class="button large" id="random">Hit me again!</button>
+
         </div>
       </div>
     </div>
-  </div>
 
 </body>
  <!--Scripts for JQuery, calling scripts from assets folder, scripts to call / use the foundation framework from a cdn -->
