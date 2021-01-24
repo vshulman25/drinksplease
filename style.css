@@ -1,4 +1,6 @@
+/* CSS styling for the Drinksplease group project */
 
+/* mobile-app from the Foundation template for mobile responsiveness */
 .mobile-app-message-bar {
     height: 5rem;
     display: -webkit-flex;
@@ -36,7 +38,8 @@
   
   .mobile-app-message-bar .message-input input[type='text'] {
     border-radius: 0.625rem;
-    margin: 0;
+    margin: 10px;
+   
   }
   
   .mobile-app-message-bar .send-button {
@@ -48,33 +51,28 @@
     font-weight: 600;
   }
 
+  /* page element styling for headers, cards, buttons */
   h1{
       text-align: center;
       font-weight: 250px; 
-      background-color:rgb(0, 255, 34);
-
-
-
+      background:linear-gradient(pink, magenta);
   }
-
-    }
 
     .button {
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      
+      margin-right: 20px; 
+      background-color: rgb(255, 0, 98);
 
-  
-
+   
 }
 
   .card-section {
-    background: white;
+    background: linear-gradient(to bottom right, pink, yellow);
     text-align: center;
     font-weight: 25;
-    $global-radius: 20px;
   }
 
   .card-divider {
@@ -83,29 +81,9 @@
 
   .card {
     margin: auto;
-    $global-radius: 20px;
   }
-    
-  .background {
-  background-image: url('Assets/shutterstock_hero.jpg')
-
-  }
-
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  &: :before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 
-  }
-}
-
+  
+  /*styling for full page background image  */
 .hero-image {
   background-image: url('Assets/shutterstock_hero.jpg');
   height: 100%;
