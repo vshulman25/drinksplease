@@ -1,3 +1,71 @@
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS styling for the Drinksplease group project */
+
+#thirsty {
+  text-align: center;
+  font-weight: 250px;
+  color: black;
+  font-family: 'Staatliches', cursive;
+  background: linear-gradient(rgb(255, 192, 248), rgb(240, 194, 95));
+}
+
+
+
+#cheers {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
+  color: rgba(0, 0, 0);
+  font-weight: 100px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  /* background: rgba(0, 0, 0, 0.249); */
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow:0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; ;
+  }
+}
+
+#drinkName {
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+#inst {
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+
+#ing {
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+.footer {
+  position: fixed;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background: linear-gradient(rgb(255, 192, 248), rgb(240, 194, 95)); */
+  font-family: 'Staatliches', cursive;
+}
+
+/* mobile-app from the Foundation template for mobile responsiveness */
 .mobile-app-message-bar {
   height: 5rem;
   display: -webkit-flex;
@@ -35,7 +103,8 @@
 
 .mobile-app-message-bar .message-input input[type='text'] {
   border-radius: 0.625rem;
-  margin: 0;
+  margin: 10px;
+
 }
 
 .mobile-app-message-bar .send-button {
@@ -47,51 +116,41 @@
   font-weight: 600;
 }
 
-#thirsty {
-  text-align: center;
-  font-weight: 250px;
-  background-color: rgb(0, 255, 34);
-  font-family: 'Bangers', cursive;
+/* page element styling for headers, cards, buttons */
 
 
-}
-
-#cheers {
-  text-align: center;
-  font-family: 'Hanalei', cursive;
-  font-size: 50px;
-  font-weight: 100px;
-}
-
-
-#drinkName {
-  text-align: center;
-  font-family: 'Luckiest Guy', cursive;
-}
-
-#inst {
-  text-align: center;
-  font-family: 'Luckiest Guy', cursive;
-}
-
-
-#ing {
-  text-align: center;
-  font-family: 'Luckiest Guy', cursive;
-}
 .button {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
+  background-color: rgb(255, 0, 98);
 
+
+}
+
+
+
+.card-section {
+  background: linear-gradient(to bottom right, pink, yellow);
+  text-align: center;
+  font-weight: 25;
+}
+
+
+.button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-section {
   background: white;
   text-align: center;
   font-weight: 25;
-  $global-radius: 20px;
+  /* $global-radius: 20px; */
 }
 
 .card-divider {
@@ -100,7 +159,7 @@
 
 .card {
   margin: auto;
-  $global-radius: 20px;
+  /* $global-radius: 20px; */
 }
 
 .background {
@@ -114,15 +173,12 @@
   align-items: center;
   height: 100vh;
 
-  &: :before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right:
-  }
+
 }
 
-.hero-image {
+
+/*styling for full page background image  */
+.hero-img {
   background-image: url('Assets/shutterstock_hero.jpg');
   height: 100%;
   background-position: center;
