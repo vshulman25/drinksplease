@@ -1,99 +1,111 @@
-
 .mobile-app-message-bar {
-    height: 5rem;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; 
-    padding: 4rem;
-  }
-  
-  .mobile-app-message-bar .camera-button {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
-    
-  }
-  
-  .mobile-app-message-bar .camera-button i,
-  .mobile-app-message-bar .camera-button img,
-  .mobile-app-message-bar .camera-button svg {
-    font-size: 1.5rem;
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-  }
-  
-  .mobile-app-message-bar .message-input {
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  
-  .mobile-app-message-bar .message-input input[type='text'] {
-    border-radius: 0.625rem;
-    margin: 0;
-  }
-  
-  .mobile-app-message-bar .send-button {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
-    padding: 1rem;
-    margin: 10px;
-    font-weight: 600;
-  }
+  height: 5rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 4rem;
+}
 
-  #thirsty {
-      text-align: center;
-      font-weight: 250px; 
-      background-color:rgb(0, 255, 34);
-      font-family: 'Chewy', cursive;
-
-
-  }
-
-  #cheers {
-    text-align: center;
-    font-family: 'Chewy', cursive;
-  }
-
-
-    .button {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-
-  
+.mobile-app-message-bar .camera-button {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 
 }
 
-  .card-section {
-    background: white;
-    text-align: center;
-    font-weight: 25;
-    $global-radius: 20px;
-  }
+.mobile-app-message-bar .camera-button i,
+.mobile-app-message-bar .camera-button img,
+.mobile-app-message-bar .camera-button svg {
+  font-size: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
 
-  .card-divider {
-    text-align: center;
-  }
+.mobile-app-message-bar .message-input {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
 
-  .card {
-    margin: auto;
-    $global-radius: 20px;
-  }
-    
-  .background {
+.mobile-app-message-bar .message-input input[type='text'] {
+  border-radius: 0.625rem;
+  margin: 0;
+}
+
+.mobile-app-message-bar .send-button {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  padding: 1rem;
+  margin: 10px;
+  font-weight: 600;
+}
+
+#thirsty {
+  text-align: center;
+  font-weight: 250px;
+  background-color: rgb(0, 255, 34);
+  font-family: 'Bangers', cursive;
+
+
+}
+
+#cheers {
+  text-align: center;
+  font-family: 'Hanalei', cursive;
+  font-size: 50px;
+  font-weight: 100px;
+}
+
+
+#drinkName {
+  text-align: center;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#inst {
+  text-align: center;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+
+#ing {
+  text-align: center;
+  font-family: 'Luckiest Guy', cursive;
+}
+.button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-section {
+  background: white;
+  text-align: center;
+  font-weight: 25;
+  $global-radius: 20px;
+}
+
+.card-divider {
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+  $global-radius: 20px;
+}
+
+.background {
   background-image: url('Assets/shutterstock_hero.jpg')
-
-  }
+}
 
 .hero {
   position: relative;
@@ -106,7 +118,7 @@
     content: '';
     position: absolute;
     top: 0px;
-    right: 
+    right:
   }
 }
 
