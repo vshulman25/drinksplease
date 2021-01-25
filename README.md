@@ -1,7 +1,7 @@
 
 # Drinks, please!
 
-**Project members:  Matthew Duffield, Julia Green, Moe Kassem, Vickie Shulman**
+**Project members:  Matthew Duffield, Julia Green, Moe Kassem, Vickee Shulman**
 
 
 **Description and Scope of project**: In a coding bootcamp group project, the objective is to learn how to work together in an agile development methodology, as well as design, implement, debug and publish a client-side polished app using server side API's.

@@ -8,6 +8,11 @@
   <title>Drinks, Please!</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./Assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" />
+  <!-- google fonts insert -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&family=Lobster&family=Shrikhand&family=Staatliches&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 </head>
@@ -16,65 +21,70 @@
 
   <!--Keep the div open to display the hero image on the full page-->
   <!--styling for hero image and header text-->
-  <div class="hero-image">
-    <h1 style="color: black; background-color: linear-gradient white magenta">Thirsty? Enter your current city location for a drink suggestion!</h1>
+
+  <div class="hero-img">
+    <h1 id="thirsty">Thirsty? Enter your current city location for a drink suggestion!</h1>
+
     <div class="button-group align-center">
       <!--User interactive; user types in their city location. Logic in API will return a warm drink if the temperature is <50F and a cold drink if the local temperature is >50F.-->
       <input type="text" name="" class="user-location" value="" placeholder="Enter the name of your city here"
-        style="width: 300px; border: 5px solid #000000">
+        style="width: 300px; border: 2px solid #00000009">
     </div>
     <div class="button-group align-center">
-      <button type="button" class="button" style="margin-right: 20px; background-color: magenta" id="location-search">Find your drink!</button>
+      <button type="button" class="button" style="margin-right: 20px; background-color: rgb(213, 125, 139)"
+        id="location-search">Find your drink!</button>
       <!--If you don't care for the suggested drink, this will use the same location input and suggest a different drink -->
-        <button type="button" class="button" style="background-color:magenta;" id="random">Hit me again!</button>
-    
+      <button type="button" class="button" style="background-color: rgb(213, 125, 139)" id="random">Hit me
+        again!</button>
     </div>
 
-<!--Cards for the drink name, drink image and ingredient list and instructions -->
-    <div class="card" style="width: 300px;">
-      <div class="" style="background-color: lightgrey;">
-        <h4 style="text-align:center;">Cheers!</h4>
-      </div>
+    <!--Cards for the drink name, drink image and ingredient list and instructions -->
+    <div class="card" style="width: auto; background-color: transparent; border: transparent;">
+      <h4 id="cheers">Cheers!</h4>
+    </div>
 
-      <!--Card to display drink image -->
-      <div class="card-section">
-        <img id="drinkImg" src="http://placehold.it/200x200">
-        <!--Area to display drink name -->
-        <div class="card-section">
-          <h4 id="drinkName">Drink Name</h4>
-        </div>
-      </div>
+    <!--Area to display drink name -->
+    <div class="card" style="width: 300px; background-color: rgba(133, 247, 84, 0.605); border-color: transparent;">
+      <h4 id="drinkName">Drink Name</h4>
+    </div>
+    <!--Card to display drink image -->
+    <div class="card" style="width: 200px;">
+      <img id="drinkImg" src="http://placehold.it/200x200">
+    </div>
 
-  
-      <!--Card to display ingredient list -->
-      <div class="card" style="width: 300px;">
-        <div class="" style="background-color: lightgrey;">
-          <h4 style="text-align:center;">Ingredient List</h4>
-          <ul>
-            <li id ="ing1" style="display: none;"></li>
-            <li id ="ing2" style="display: none;"></li>
-            <li id ="ing3" style="display: none;"></li>
-            <li id ="ing4" style="display: none;"></li>
-            <li id ="ing5" style="display: none;"></li>
-            <li id ="ing6" style="display: none;"></li>
-            <li id ="ing7" style="display: none;"></li>
-          </ul>
-          <!--Area to display instructions to make the drink -->
-          <h4 style="text-align:center;">Instructions</h4>
-          <p id="instructions"></p>
-        </div>
+    <!--Card to display ingredient list -->
+    <div class="card" style="width: 300px; background-color: rgba(133, 247, 84, 0.605); border-color: transparent;">
+      <!-- <div class="" style="background-color: lightgrey;"> -->
+      <h4 id="ing">Ingredient List</h4>
+      <ul>
+        <li id="ing1" style="display: none;"></li>
+        <li id="ing2" style="display: none;"></li>
+        <li id="ing3" style="display: none;"></li>
+        <li id="ing4" style="display: none;"></li>
+        <li id="ing5" style="display: none;"></li>
+        <li id="ing6" style="display: none;"></li>
+        <li id="ing7" style="display: none;"></li>
+      </ul>
+      <!--Area to display instructions to make the drink -->
+    </div>
 
-        </div>
-      </div>
+    <div class="card" style="width: 300px; background-color: rgba(133, 247, 84, 0.605); border-color: transparent;">
+      <h4 id="inst">Instructions</h4>
+      <p id="instructions"></p>
+    </div>
+
+    <div class="footer" style="margin: auto; padding: 15px;">
+      <p>Please enjoy responsibly!</p>
     </div>
 
 </body>
- <!--Scripts for JQuery, calling scripts from assets folder, scripts to call / use the foundation framework from a cdn -->
+
+<!--Scripts for JQuery, calling scripts from assets folder, scripts to call / use the foundation framework from a cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="Assets/script.js"></script>
-<script src="js/vendor/jquery.js"></script>
+<!-- <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
+<script src="js/vendor/foundation.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
   integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 <!--Script to force the page to completely load before responding to user input -->

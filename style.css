@@ -1,94 +1,203 @@
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* min-height: 100vh; */
+  position: relative;
+  min-height: 100%;
+  margin-bottom: -50px;
+  min-height: 100vh;
+}
+
+
 /* CSS styling for the Drinksplease group project */
+
+#thirsty {
+  text-align: center;
+  font-weight: 250px;
+  color: black;
+  font-family: 'Staatliches', cursive;
+  background: linear-gradient(rgb(255, 192, 248), rgb(240, 194, 95));
+}
+
+
+
+#cheers {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
+  color: rgba(0, 0, 0);
+  font-weight: 100px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffef3d95, 0 0 40px #ffef3d95, 0 0 50px #ffef3d95, 0 0 60px #ffef3d95, 0 0 70px #ffef3d95;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ceff3d95, 0 0 40px #ceff3d95, 0 0 50px #ceff3d95, 0 0 60px #ceff3d95, 0 0 70px #ceff3d95, 0 0 80px #ceff3d95;
+    ;
+  }
+}
+
+#drinkName,
+#inst,
+#ing {
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+}
+
+.footer {
+  position: static;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  /* width: 100%; */
+  font-family: 'Staatliches', cursive;
+  min-height: 100vh;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffef3d95, 0 0 40px #ffef3d95, 0 0 50px #ffef3d95, 0 0 60px #ffef3d95, 0 0 70px #ffef3d95;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffef3d95, 0 0 40px #ffef3d95, 0 0 50px #ffef3d95, 0 0 60px #ffef3d95, 0 0 70px #ffef3d95, 0 0 80px #ffef3d95;
+    ;
+  }
+}
+
 
 /* mobile-app from the Foundation template for mobile responsiveness */
 .mobile-app-message-bar {
-    height: 5rem;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; 
-    padding: 4rem;
-  }
-  
-  .mobile-app-message-bar .camera-button {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
-    
-  }
-  
-  .mobile-app-message-bar .camera-button i,
-  .mobile-app-message-bar .camera-button img,
-  .mobile-app-message-bar .camera-button svg {
-    font-size: 1.5rem;
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-  }
-  
-  .mobile-app-message-bar .message-input {
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  
-  .mobile-app-message-bar .message-input input[type='text'] {
-    border-radius: 0.625rem;
-    margin: 10px;
-   
-  }
-  
-  .mobile-app-message-bar .send-button {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1;
-    padding: 1rem;
-    margin: 10px;
-    font-weight: 600;
-  }
-
-  /* page element styling for headers, cards, buttons */
-  h1{
-      text-align: center;
-      font-weight: 250px; 
-      background:linear-gradient(pink, magenta);
-  }
-
-    .button {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 20px; 
-      background-color: rgb(255, 0, 98);
-
-   
+  height: 5rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 4rem;
 }
 
-  .card-section {
-    background: linear-gradient(to bottom right, pink, yellow);
-    text-align: center;
-    font-weight: 25;
-  }
+.mobile-app-message-bar .camera-button {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 
-  .card-divider {
-    text-align: center;
-  }
+}
 
-  .card {
-    margin: auto;
-  }
-  
-  /*styling for full page background image  */
-.hero-image {
-  background-image: url('Assets/shutterstock_hero.jpg');
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.mobile-app-message-bar .camera-button i,
+.mobile-app-message-bar .camera-button img,
+.mobile-app-message-bar .camera-button svg {
+  font-size: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.mobile-app-message-bar .message-input {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.mobile-app-message-bar .message-input input[type='text'] {
+  border-radius: 0.625rem;
+  margin: 10px;
+
+}
+
+.mobile-app-message-bar .send-button {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  padding: 1rem;
+  margin: 10px;
+  font-weight: 600;
+}
+
+/* page element styling for headers, cards, buttons */
+
+
+.button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  background-color: rgb(255, 0, 98);
+
+
+}
+
+
+
+.card-section {
+  background: linear-gradient(to bottom right, pink, yellow);
+  text-align: center;
+  font-weight: 25;
+}
+
+
+.button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-section {
+  background: white;
+  text-align: center;
+  font-weight: 25;
+  /* $global-radius: 20px; */
+}
+
+.card-divider {
+  text-align: center;
+}
+
+.card {
+  margin: auto;
+  display: flex;
+  /* $global-radius: 20px; */
+}
+
+.background {
+  background-image: url('Assets/shutterstock_hero.jpg')
+}
+
+.hero {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+
+}
+
+
+/*styling for full page background image  */
+.hero-img {
+  background-image: url('Assets/shutterstock_hero.jpg');
+  /* height: 100%; */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
 }
