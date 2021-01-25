@@ -1,9 +1,15 @@
 html,
-body,
-.wrapper {
+body {
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* min-height: 100vh; */
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 
 /* CSS styling for the Drinksplease group project */
@@ -34,8 +40,10 @@ body,
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f76e, 0 0 40px #f0f76e, 0 0 50px #f0f76e, 0 0 60px #f0f76e, 0 0 70px #f0f76e;
   }
+
   to {
-    text-shadow:0 0 20px #fff, 0 0 30px #c3f76e, 0 0 40px #c3f76e, 0 0 50px #c3f76e, 0 0 60px #c3f76e, 0 0 70px #c3f76e, 0 0 80px #c3f76e; ;
+    text-shadow: 0 0 20px #fff, 0 0 30px #c3f76e, 0 0 40px #c3f76e, 0 0 50px #c3f76e, 0 0 60px #c3f76e, 0 0 70px #c3f76e, 0 0 80px #c3f76e;
+    ;
   }
 }
 
@@ -56,14 +64,20 @@ body,
 }
 
 .footer {
-  position: fixed;
+  position: bottom;
   text-align: center;
   left: 0;
   bottom: 0;
   width: 100%;
-  /* background: linear-gradient(rgb(255, 192, 248), rgb(240, 194, 95)); */
+  height: 50px;
+  padding: 2px;
+  justify-content: center;
   font-family: 'Staatliches', cursive;
+  display: block;
+  clear: both;
+  min-height: 100vh;
 }
+
 
 /* mobile-app from the Foundation template for mobile responsiveness */
 .mobile-app-message-bar {
@@ -159,6 +173,7 @@ body,
 
 .card {
   margin: auto;
+  display: flex;
   /* $global-radius: 20px; */
 }
 
@@ -180,9 +195,9 @@ body,
 /*styling for full page background image  */
 .hero-img {
   background-image: url('Assets/shutterstock_hero.jpg');
-  height: 100%;
-  background-position: center;
+  /* height: 100%; */
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
-  position: relative;
 }
