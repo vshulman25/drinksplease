@@ -27,7 +27,7 @@ If a user does not care for the featured drink, they can click a “Hit me again
 
   *Interactivity : User is prompted for drink preference and location, uses OpenWeather API to determine local weather and then returns a drink suggestion to the user
 
-  *Screenshot: 
+  *Screenshot: https://github.com/vshulman25/drinksplease/blob/main/Assets/drinksplease.png
 
 
 **Other Items of Interest**
