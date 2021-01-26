@@ -6,108 +6,41 @@
 
 **Description and Scope of project**: In a coding bootcamp group project, the objective is to learn how to work together in an agile development methodology, as well as design, implement, debug and publish a client-side polished app using server side API's.
 
-**Application Proposal**: TBD
+**Application Proposal**: User story
+I can use this app to help me find a unique drink, the ingredients and directions to make the drink.
+As the weather is different in many places and affects the type of drink I prefer,  entering a city will present me with a drink that is compatible with the current weather.
+If I prefer to see a different drink, I can get a random drink suggestion. 
 
-**Application Checklist**  
--Technologies used:
+**Summary**
+The “Drinks, Please” web application is an interactive tool for a user to research a drink based on their location. The featured drink is presented to the user with an image, ingredients list and a set of directions to make the drink.
+The result is randomized to a set of drinks that are classified as “cold weather”/warm drinks and “warm weather”/cold drinks.  
+When the user inputs a city, an API call to openweathermap.org will determine the current temperature in Fahrenheit.  If the temperature is < 50 degrees Fahrenheit, a warm drink is presented using a random value in a predetermined array and an API call is made to thecocktaildb to get the image, ingredients and instructions.  If the temperature is > 50 degrees Fahrenheit, a cold drink is presented.  The API call is randomized to return a drink that is NOT in the hot drinks array.
+If a user does not care for the featured drink, they can click a “Hit me again” button to be presented with a randomized drink from the drinks database
 
-  *CSS Framework: Foundation
+**Technologies Used:
+
+  *CSS Framework: Foundation 
 
   *Server Side APIs : openweather.org and thecocktaildb.com
 
-  *Github page deployment link: TBD
+  *Github page deployment link: https://github.com/vshulman25/drinksplease
 
-  *Interactivity : user is prompted for drink preference and location, uses OpenWeather API to determine local weather and then returns a drink suggestion to the user
+  *Interactivity : User is prompted for drink preference and location, uses OpenWeather API to determine local weather and then returns a drink suggestion to the user
 
-  *Screenshot: TBD
-
-
-**Other items to consider:**
-
---Responsive layout
-
---Uses modals
-
---Uses client-side storage 
-
---Polished UI
-
---Clean repo
+  *Screenshot: 
 
 
-## Grading Requirements
+**Other Items of Interest**
 
-This project is graded based on the following criteria:
+--Responsive layout : We used the Foundation framework, which is mobile-responsive
 
-### Technical Acceptance Criteria: 25%
+--Uses modals : The Foundation framework had a robust and mature form that we could use to capture the user location / city.
 
-* Satisfies the following code requirements:
+--Uses client-side storage : We are storing the user's cities in the "locationofuser".  Further development includes returning this to the screen as well as providing a user navigated history of the drinks.
 
-	* Application uses at least two server-side APIs.
+--Polished UI : We were able to deploy the working app early and spend some time finalizing the "fit and finish" using Shutterstock images and webkits.
 
-    * Application uses client-side storage to store persistent data.
-
-    * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
-
-    * Application uses a CSS framework other than Bootstrap.
-
-    * Application is interactive (accepts and responds to user input)
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using Powerpoint or a similar presentation software.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-
-## Submission on BCS
-
-Each member is required to submit the following:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository.
-
-
-
+--Clean repo : The repo has multiple commits from each user and all team members worked on the project management tasks. 
 
 
 Presentation Slide Deck: https://docs.google.com/presentation/d/151rPxalmkVx5wA2Nv7iQw2c8j26kcdOa8j70wSz3xVA/edit?usp=sharinggit 
