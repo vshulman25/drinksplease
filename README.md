@@ -19,20 +19,20 @@
 
   *Interactivity : user is prompted for drink preference and location, uses OpenWeather API to determine local weather and then returns a drink suggestion to the user
 
-  *Screenshot: TBD
+  *Screenshot: 
 
 
 **Other items to consider:**
 
---Responsive layout
+--Responsive layout: We used the Foundation layout which is mobile-responsive and worked to style the site with additional features 
 
 --Uses modals
 
---Uses client-side storage 
+--Uses client-side storage : We are storing previous cities in the local storage in the "locationofuser" which stores an array of cities that have been entered by the user.
 
---Polished UI
+--Polished UI : We successfully deployed a working app early and spent some time refining the look and workflow.
 
---Clean repo
+--Clean repo 
 
 
 ## Grading Requirements
