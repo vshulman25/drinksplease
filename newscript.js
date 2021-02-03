@@ -2,3 +2,4 @@
 
 let makeFaster = doublespeed
 
+doublespeed = old.code.X2
