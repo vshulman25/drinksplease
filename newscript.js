@@ -3,3 +3,5 @@
 let makeFaster = doublespeed
 
 doublespeed = old.code.X2
+
+new.code = wow.fast
