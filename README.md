@@ -1,5 +1,5 @@
 
-# Drinks, please!
+# Drinks, please!!
 
 **Project members:  Matthew Duffield, Julia Green, Moe Kassem, Vickee Shulman**
 
@@ -15,7 +15,7 @@ If I prefer to see a different drink, I can get a random drink suggestion.
 The “Drinks, Please” web application is an interactive tool for a user to research a drink based on their location. The featured drink is presented to the user with an image, ingredients list and a set of directions to make the drink.
 The result is randomized to a set of drinks that are classified as “cold weather”/warm drinks and “warm weather”/cold drinks.  
 When the user inputs a city, an API call to openweathermap.org will determine the current temperature in Fahrenheit.  If the temperature is < 50 degrees Fahrenheit, a warm drink is presented using a random value in a predetermined array and an API call is made to thecocktaildb to get the image, ingredients and instructions.  If the temperature is > 50 degrees Fahrenheit, a cold drink is presented.  The API call is randomized to return a drink that is NOT in the hot drinks array.
-If a user does not care for the featured drink, they can click a “Hit me again” button to be presented with a randomized drink from the drinks database
+If a user does not care for the featured drink, they can click a “Hit me again” button to be presented with a randomized drink from the drinks database. 
 
 **Technologies Used:
 
