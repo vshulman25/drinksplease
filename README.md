@@ -1,8 +1,6 @@
 
 # Drinks, please!
 
-**Project members:  Matthew Duffield, Julia Green, Moe Kassem, Vickee Shulman**
-
 
 **Description and Scope of project**: In a coding bootcamp group project, the objective is to learn how to work together in an agile development methodology, as well as design, implement, debug and publish a client-side polished app using server side API's.
 
@@ -41,6 +39,3 @@ If a user does not care for the featured drink, they can click a “Hit me again
 --Polished UI : We were able to deploy the working app early and spend some time finalizing the "fit and finish" using Shutterstock images and webkits.
 
 --Clean repo : The repo has multiple commits from each user and all team members worked on the project management tasks. 
-
-
-Presentation Slide Deck: https://docs.google.com/presentation/d/151rPxalmkVx5wA2Nv7iQw2c8j26kcdOa8j70wSz3xVA/edit?usp=sharinggit 
